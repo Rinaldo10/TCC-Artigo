@@ -1,0 +1,97 @@
+\documentclass[a4paper,11pt]{report}
+\usepackage{natbib}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[ruled]{algorithm}
+%\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=black,
+    pdftitle={Algoritmos de Rearranjo de Genomas},
+    pdfpagemode=FullScreen,
+    }
+
+
+% Folha A4
+\setlength{\parskip}{.2cm}
+\setlength{\textwidth}{16.5cm}
+\setlength{\textheight}{21.5cm}
+\setlength{\topmargin}{0cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\baselineskip}{4.2cm}
+
+% 'Variáveis globais' (substitua!)
+\newcommand{\titulo}{Algoritmos de Rearranjo de Genomas}
+\newcommand{\autorA}{Rinaldo Reverte Mendes Junior}
+\newcommand{\curso}{Ciência da Computação}
+\newcommand{\orient}{Orientador: Prof$^\text{\footnotesize o}$ Fábio Henrique Viduani Martinez}
+\newcommand{\corient}{Coorientador: Prof$^\text{\footnotesize o}$ Francisco Elói Soares de Araújo}
+\newcommand{\data}{junho de 2021}
+
+% 'Comandos que criados por mim' (substitua!)
+\newcommand{\EA}[1]{\textcolor{red}{#1}}
+\newcommand{\RR}[1]{\textcolor{green}{#1}}
+\newcommand{\FV}[1]{\textcolor{blue}{(Fábio: #1)}}
+\newcommand{\dif}{\mbox{\emph{dif}}}
+\newtheorem{lema}{Lema}[section]
+\newcommand{\reversao}[2]{\Big[{#1}, {#2}\Big]}
+
+\newtheorem{prop}{Propriedade}
+\newtheorem{pr}{Proposição}
+
+\def\prova{\noindent \textbf{Prova}. \ignorespaces}
+\def\endprova{\vspace*{-.2cm}\hfill $_{\Box}$ \vspace*{5mm}}
+
+\begin{document}
+
+\pagestyle{empty}
+\newpage
+\input capa.tex
+
+\newpage
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{1}
+\input resumo.tex
+\newpage
+\ \
+\newpage
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+\include{cap1}
+\include{cap2}
+\include{cap3}
+\include{cap4}
+\include{cap5}
+
+
+\addcontentsline{toc}{chapter}{Referências bibliográficas}
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{referencias}
+\include{Anexos}
+\addcontentsline{toc}{chapter}{Anexos}
+\end{document}

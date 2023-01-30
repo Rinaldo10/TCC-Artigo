@@ -1,0 +1,20 @@
+\chapter{Introdução}
+    
+        % O problema de distância editável do qual calcula-se a quantidade miníma de operações (inserção, remoção e substituição) necessárias para transformar uma \textit{string} em outra tem-se mantido em relevância a alguns anos. Uma variação deste problema nos chamou a atenção na área da Biologia mais precisamente no campo de Rearranjo de genomas, este problema é o de distância de ordenação por reversões que consiste em   calcular a menor série de reversões necessárias para transformar uma permutação em outra. 
+    
+    O problema de Rearranjo de Genomas consiste em calcular a menor quantidade de eventos de rearranjo necessários para transformar um genoma em outro afim de estimar uma distância evolucionária. Estes eventos podem ser provenientes de mutações cromossômicas estruturais, como: transposições, reversões, translocações, entre outras. Para a modelagem do problema utilizamos permutações que descrevem a ordem dos genes nos cromossomos correspondentes, e em relação aos eventos de rearranjo, neste trabalho estudamos um evento em especifico que são as reversões. Nosso foco sempre será encontrar a quantidade miníma de reversões, pois consideramos que a natureza seja parcimoniosa quanto a evolução. Essa pressuposição corresponde à realidade principalmente para distâncias pequenas. Assim nos dedicamos a entender os fundamentos descritos por \cite{kececioglu1995exact} e os algoritmos propostos como solução deste problema: Um algoritmo aproximado (\textit{Greedy}) que utiliza de uma estratégia gulosa que a cada iteração seleciona a melhor solução local e constrói assim os resultados, e um algoritmo exato (\textit{Branch and Bound}) que enumera os candidatos a solução ótima e utiliza de algoritmos que fornecem limitantes para diminuir a quantidade destes candidatos até que só sobre a melhor solução.
+    
+    % além de reproduzirmos versões dos algoritmos desenvolvidos por ele para a solução deste problema.
+    
+      Este texto está organizado na seguinte estrutura: De início na Seção \ref{fundamentos}, fornecemos o arcabouço necessário para a modelagem e entendimento do problema e desenvolvimento das soluções. Adiante, na Seção \ref{Algoritmos}, apresentamos os algoritmos aproximado e exato e descrevemos suas implementações e particularidades. Após isso, na Seção \ref{cap:experimentos} apresentaremos experimentos feitos em cenários específicos com permutações geradas, de modo a medir os desempenhos dos algoritmos e trazer um comparativo entre eles. Ao fim, na Seção \ref{cap:conclusao}, temos nossas conclusões e análises finais.
+%   Na Biologia Molecular, a medida que o mapeamento e sequenciamento do DNA tornam-se processos de larga escala, um leque de problemas é aberto constantemente para inúmeras áreas de pesquisa, entre elas a Computação. Um destes problemas é o de
+  
+% A necessidade de se encontrar a quantidade mínima de operações que transformem uma permutação em outra parte do conceito de parcimônia filogenética, onde o conjunto de menor número de transformações possui a maior possibilidade estatística de estar correto (caminho de menor energia) e com isso o conceito de medida usável para distância evolutiva é construído. As operações que usamos para medir a distância evolutiva são variadas: inversões/reversões, transposições, inserções, exclusões, substituições, etc. Todas elas são aplicadas a subcadeias da permutação original. No nosso caso, as operações são restritas a reversões, ou seja, encontrar a menor quantidade de reversões necessárias para transformar uma dada permutação em outra dada permutação. Também podemos estar interessados na sequência de reversões que se refere a essa quantidade mínima de reversões. Dessa forma, estudamos um problema de busca e otimização. 
+  
+%   (contar a sequencia de passos de kececioglu, o que o nos é garantido)
+  
+%   mostrar algoritmo exato
+  
+  %Revisão Bibliográfica, sugestão professor Fábio  
+
+

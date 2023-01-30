@@ -1,0 +1,59 @@
+ \chapter{Problemas}
+
+\section{Nosso Problema}
+As raízes de nosso problema de distância de reversão vem do problema de \textbf{edit distance}, um problema da computação que consiste em 
+encontrar o menor conjunto de operações necessárias para transformar uma string em outra.
+\section{Lemas, Teoremas e Corolários}
+
+Alguns Lemas acompanham nosso processo de entendimento do problema:
+
+\begin{lema}
+ Toda permutação com um sub-cadeia decrescente (SD) possui uma reversão que remove um breakpoint.
+ 
+\end{lema}
+\begin{enumerate}
+
+    \item $\pi$ possui um SD: escolha o SD aquele que possui o menor elemento $\pi_i$, digamos \[
+    |\ldots  8 \ 7 \ 6 \ 5 |.\]
+   
+    \item Todos os números menores que $\pi_i = 5$ estarão em uma SC, pois se não $\pi_i$, não seria o minimal. \[
+    |1 \ 2 \ 3 \ 4 | 8 \ 7 \ 6 \ 5 |.\]
+   
+    \item Existe um único breakpoint na permutação $\pi$ \[
+    [1 \ 2 \ 3 \underbrace{4 | 8} \ 7 \ 6 \ 5 ].\]
+    
+    \item Aplicando uma reversão sobre a SD conseguimos 'ilustrar' que existe uma reversão que remove um BP
+    \[ [1 \ 2 \ 3 \ 4 \underbrace{8 \ 7 \ 6 \ 5} ].\]
+    \[ [1 \ 2 \ 3 \ 4 \ 5 \ 6 \ 7 \ 8 ].\]
+
+\end{enumerate}
+
+\begin{lema}
+ Sendo $\pi$ uma permutação com uma SD. Se toda reversão que remove 1 BP de $\pi$ deixa a permutação sem SD, $\pi$ uma reversão que remove 2 BP.
+ 
+\end{lema}
+
+\begin{lema}
+O algoritmo Greedy ordena uma permutação $\pi$ com uma SD em no máximo $\phi(\pi)$ reversões.
+ 
+\end{lema}
+\newtheorem{theorema}{Theorema}
+\begin{theorema}
+O algoritmo Greedy ordena toda permutação $\pi$ em no máximo $\phi(\pi)$
+\end{theorema}
+
+
+\newtheorem{corollary}{Corollary}
+\begin{corollary}
+O algoritmo Greedy é uma 2-aproximação para ordenação por reversões.
+\end{corollary}
+
+
+
+\section{Trabalhos Relacionados}
+
+
+
+
+
+
